@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Great Number Game</title>
+</head>
+<body>
+    <h1 class="jumbotron text-center bg-primary col-6 mx-auto my-3 rounded">!!!THE GREAT NUMBER GAME!!!</h1>
+    <h4 class="jumbotron text-center col-4 bg-warning mx-auto my-0 rounded"> I'm thinking of a number between 1-100</h4>
+    <form action="/guess" method="post" class="bg-dark text-warning rounded col-2 mx-auto my-3 text-center fs-4 px-3 pt-3">
+        <label>What is your guess?</label>
+        <div>
+            <input name="guess">
+        </div>
+        <button class="btn btn-warning my-4 fs-5">guess</button>
+    </form>
+    <div>
+        <p class="col-3 fs-3 bg-dark text-light text-center mx-auto rounded">You Guessed: {{session["answer"]}}</p>
+    </div>
+    <div class="col-3 fs-3 text-center mx-auto rounded">
+        <a class="btn btn-warning text-center justify-content-middle" type="button" href="/reset">Wanna play again?</a>
+    </div>
+</body>
+</html>
